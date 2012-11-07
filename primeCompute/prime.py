@@ -29,7 +29,7 @@ def count_prime(N):
     elif N < 11:return 4
     elif N < 12:return 5
     else:
-        lazy_init_list = CloneableLazyList((x for x in xrange(11, N, 1) if x % 2 != 0 and x % 3 != 0 and x % 5 != 0 and x % 7 != 0))
+        lazy_init_list = CloneableLazyList((x for x in xrange(11, N + 1 , 1) if x % 2 != 0 and x % 3 != 0 and x % 5 != 0 and x % 7 != 0))
         init_list_length = N - 1 - N / 2 - N / 3 - N / 5 - N / 7 + N / (2 * 3) + N / (3 * 7) + N / (5 * 7) + N / (2 * 5) + N / (2 * 7) + N / (3 * 5) - N / (2 * 3 * 5) - N / (3 * 5 * 7) - N / (2 * 5 * 7) - N / (2 * 3 * 7) + N / (2 * 3 * 5 * 7)
         
         removed = set()
@@ -52,5 +52,5 @@ def count_prime(N):
 
 import time
 start = time.time()
-print count_prime(1000000)
+print count_prime(12)
 print 'time elapsed: %ss' % `time.time() - start`
