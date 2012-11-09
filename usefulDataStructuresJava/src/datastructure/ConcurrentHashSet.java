@@ -25,6 +25,8 @@ public class ConcurrentHashSet<E> extends AbstractSet<E> implements Set<E>, Clon
     private ConcurrentHashMap<E, Object> content = new ConcurrentHashMap<E, Object>();
 
     public boolean equals(Object o) {
+        if (this == o)
+            return true;
         if (o == null || !(o instanceof ConcurrentHashSet))
             return false;
         return this.content.keySet().equals(((ConcurrentHashSet<?>) o).content.keySet());
