@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * A concurrent, non-blocking set, based on the 'ConcurrentHashMap'
  * implementation.
- * Collections.newSetFromMap may do this better...
+ * XXX Collections.newSetFromMap may do this better...
  * 
  * @author pf-miles Nov 7, 2012 2:43:37 PM
  */

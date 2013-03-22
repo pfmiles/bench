@@ -1,5 +1,3 @@
-import java.util.concurrent.TimeUnit;
-
 import com.sun.btrace.AnyType;
 import com.sun.btrace.BTraceUtils;
 import com.sun.btrace.annotations.BTrace;
