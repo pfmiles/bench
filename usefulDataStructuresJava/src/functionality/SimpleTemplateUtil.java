@@ -2,7 +2,6 @@ package functionality;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.MessageFormat;
 
 import datastructure.ByteAppender;
 
@@ -20,10 +19,10 @@ public abstract class SimpleTemplateUtil {
      *            计算模板相对位置的class
      * @param relativePath
      *            模板文件相对于class的位置
-     * @return
+     * @return 字符串形式的模板内容，后续可使用MessageFormat.format()方法执行渲染
      */
-    public static MessageFormat loadTemplate(Class<?> relativeToCls, String relativePath) {
-        return new MessageFormat(readStrStream(relativeToCls.getResourceAsStream(relativePath)));
+    public static String loadTemplate(Class<?> relativeToCls, String relativePath) {
+        return readStrStream(relativeToCls.getResourceAsStream(relativePath));
     }
 
     private static String readStrStream(InputStream stm) {

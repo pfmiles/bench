@@ -1,0 +1,6 @@
+数据解构：
+    1.ByteAppender: 像StringBuilder一样拼装bytes!
+    2.ConcurrentHashSet: 并发版本的hashSet，已废弃，建议使用Collections.newSetFromMap代替
+功能：
+    1.SimpleTemplateUtil: 使用java内置的MessageFormat类实现的简单模板引擎
+    2.TimedRunner: 限时执行任意代码片段
