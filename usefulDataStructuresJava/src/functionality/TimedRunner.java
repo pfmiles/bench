@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * new TimedRunner(1000) {
  * 
  *     protected void run() {
- *         // business logic goes here...
+ *         // business logic goes here... should respond to interruptions correctly
  *         ...
  *     }
  * 
